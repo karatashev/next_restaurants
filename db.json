@@ -1,12 +1,6 @@
 {
   "restaurants": [
     {
-      "id": "1",
-      "picture": "https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "name": "Tasty Bites",
-      "openedDate": "2022-01-01"
-    },
-    {
       "id": "2",
       "picture": "https://images.pexels.com/photos/67468/pexels-photo-67468.jpeg?auto=compress&cs=tinysrgb&w=800",
       "name": "Pizza Paradise",
@@ -53,12 +47,6 @@
       "picture": "https://images.pexels.com/photos/239975/pexels-photo-239975.jpeg?auto=compress&cs=tinysrgb&w=800",
       "name": "Seafood Sensations",
       "openedDate": "2014-11-20"
-    },
-    {
-      "id": "10",
-      "picture": "https://images.pexels.com/photos/239975/pexels-photo-239975.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "name": "Dessert Dreamland",
-      "openedDate": "2013-08-15"
     },
     {
       "id": "",

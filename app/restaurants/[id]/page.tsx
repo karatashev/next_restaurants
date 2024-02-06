@@ -5,6 +5,7 @@ import React, { useState } from 'react'
 import { Restaurant } from '@/types'
 import styles from "./RestaurantDetails.module.css"
 import Modal from '@/app/components/Modal/Modal'
+import { useRouter } from 'next/navigation'
 
 // export const dynamicParams = true
 
@@ -48,6 +49,8 @@ async function getRestaurant(id: string) {
 
 
 const RestaurantDetails: React.FC<RestaurantDetailsProps> = async ({params}) => {
+  const router = useRouter()
+
   const [isModalOpen, setIsModalOpen] = useState(false);
 
     const restaurant = await getRestaurant(params.id)
@@ -60,6 +63,8 @@ const RestaurantDetails: React.FC<RestaurantDetailsProps> = async ({params}) => 
   
         setIsModalOpen(false);
 
+        router.push("/restaurants")
+
       } catch (error) {
         console.error('Error deleting restaurant:', error);
       }
@@ -70,7 +75,8 @@ const RestaurantDetails: React.FC<RestaurantDetailsProps> = async ({params}) => 
     <div className={styles.details_container}>
       <h2>Restaurant Details</h2>
         <Card key={restaurant.id} restaurant={restaurant} />
-        <button onClick={() => setIsModalOpen(true)}>Delete Restaurant</button>
+        <button onClick={handleDelete}>Delete Restaurant</button>
+        <button >Edit Restaurant</button>
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} onConfirm={handleDelete} />
     </div>
   )
