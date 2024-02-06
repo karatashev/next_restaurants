@@ -1,0 +1,65 @@
+{
+    "restaurants": [
+      {
+        "id": 1,
+        "picture": "https://example.com/restaurant1.jpg",
+        "name": "Tasty Bites",
+        "openedDate": "2022-01-01"
+      },
+      {
+        "id": 2,
+        "picture": "https://example.com/restaurant2.jpg",
+        "name": "Pizza Paradise",
+        "openedDate": "2021-05-15"
+      },
+      {
+        "id": 3,
+        "picture": "https://example.com/restaurant3.jpg",
+        "name": "Burger Haven",
+        "openedDate": "2020-10-20"
+      },
+      {
+        "id": 4,
+        "picture": "https://example.com/restaurant4.jpg",
+        "name": "Sushi Sensation",
+        "openedDate": "2019-12-01"
+      },
+      {
+        "id": 5,
+        "picture": "https://example.com/restaurant5.jpg",
+        "name": "Mexican Fiesta",
+        "openedDate": "2018-07-10"
+      },
+      {
+        "id": 6,
+        "picture": "https://example.com/restaurant6.jpg",
+        "name": "Noodle House",
+        "openedDate": "2017-03-25"
+      },
+      {
+        "id": 7,
+        "picture": "https://example.com/restaurant7.jpg",
+        "name": "Steakhouse Grill",
+        "openedDate": "2016-09-12"
+      },
+      {
+        "id": 8,
+        "picture": "https://example.com/restaurant8.jpg",
+        "name": "Vegetarian Delight",
+        "openedDate": "2015-04-03"
+      },
+      {
+        "id": 9,
+        "picture": "https://example.com/restaurant9.jpg",
+        "name": "Seafood Sensations",
+        "openedDate": "2014-11-20"
+      },
+      {
+        "id": 10,
+        "picture": "https://example.com/restaurant10.jpg",
+        "name": "Dessert Dreamland",
+        "openedDate": "2013-08-15"
+      }
+    ]
+  }
+  
