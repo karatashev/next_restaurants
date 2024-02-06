@@ -1,0 +1,14 @@
+.card_container {
+    width: 300px;
+    height: 200px;
+    background-color: grey;
+    color: white;
+    display: flex;justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.card_container h3 {
+    font-size: 24px;
+}

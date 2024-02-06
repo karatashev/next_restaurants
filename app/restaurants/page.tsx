@@ -1,5 +1,8 @@
 
-import styles from "./page.module.css";
+import Link from "next/link";
+import Card from "../components/Card/Card";
+
+import { Restaurant } from "@/types";
 
 
 async function fetchData() {
@@ -12,7 +15,6 @@ async function fetchData() {
  
   return res.json()
 }
- 
 
 
 
@@ -22,14 +24,12 @@ export default async function Home() {
   console.log(restaurants)
 
   return (
-    <main className={styles.main}>
-    {restaurants.map((item:any) => (
-      <div key={item.id}>
-        <h3>{item.name}</h3>
-        <img src={item.picture} alt={item.name} />
-        <p> Date opened: {item.openedDate}</p>
-      </div>
+    <main className={""}>
+    {restaurants.map((restaurant: Restaurant) => (
+      <Link href={`/restaurants/${restaurant.id}`}>
+      <Card key={restaurant.id} restaurant={restaurant} />
+      </Link>
     ))}
-    </main>
+  </main>
   );
 }
