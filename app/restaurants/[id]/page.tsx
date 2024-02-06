@@ -1,9 +1,25 @@
 import Card from '@/app/components/Card/Card'
 import React from 'react'
+import { Restaurant } from '@/types'
 
+export const dynamicParams = true
+
+export async function generateStaticParams() {
+    const res = await fetch("http://localhost:8000/restaurants")
+
+    const restaurants = await res.json()
+
+    return restaurants.map((restaurant: Restaurant) => ({
+        id: restaurant.id
+    }))
+} 
 
 async function getRestaurant(id: string) {
-    const res = await fetch('http://localhost:8000/restaurants/' + id)
+    const res = await fetch('http://localhost:8000/restaurants/' + id, {
+        next: {
+            revalidate: 0
+        }
+    })
    
     if (!res.ok) {
       // This will activate the closest `error.js` Error Boundary
@@ -22,13 +38,15 @@ async function getRestaurant(id: string) {
     params: Params;
   }
 
+
+  
+
 const RestaurantDetails: React.FC<RestaurantDetailsProps> = async ({params}) => {
     const restaurant = await getRestaurant(params.id)
     console.log(restaurant, 'restaurant')
   return (
     <div>
         <Card key={restaurant.id} restaurant={restaurant} />
-
     </div>
   )
 }

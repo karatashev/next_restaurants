@@ -6,7 +6,12 @@ import { Restaurant } from "@/types";
 
 
 async function fetchData() {
-  const res = await fetch('http://localhost:8000/restaurants')
+  const res = await fetch('http://localhost:8000/restaurants', {
+     next: {
+      revalidate: 1
+     }
+  })
+  
  
   if (!res.ok) {
     // This will activate the closest `error.js` Error Boundary
