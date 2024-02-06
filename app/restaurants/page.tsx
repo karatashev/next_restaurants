@@ -3,6 +3,7 @@ import Link from "next/link";
 import Card from "../components/Card/Card";
 
 import { Restaurant } from "@/types";
+import styles from "./RestaurantsList.module.css"
 
 
 async function fetchData() {
@@ -29,12 +30,17 @@ export default async function Home() {
   console.log(restaurants)
 
   return (
-    <main className={""}>
+    <main className={styles.restaurants_container}>
+      <h2>See our restaurants</h2>
+
+      <div className={styles.restaurants_cards_container}>
+
     {restaurants.map((restaurant: Restaurant) => (
       <Link href={`/restaurants/${restaurant.id}`}>
       <Card key={restaurant.id} restaurant={restaurant} />
       </Link>
     ))}
+      </div>
   </main>
   );
 }
