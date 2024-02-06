@@ -1,18 +1,6 @@
 {
   "restaurants": [
     {
-      "id": "2",
-      "picture": "https://images.pexels.com/photos/67468/pexels-photo-67468.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "name": "Pizza Paradise",
-      "openedDate": "2021-05-15"
-    },
-    {
-      "id": "3",
-      "picture": "https://images.pexels.com/photos/1058277/pexels-photo-1058277.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "name": "Burger Haven",
-      "openedDate": "2020-10-20"
-    },
-    {
       "id": "4",
       "picture": "https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=800",
       "name": "Sushi Sensation",
@@ -35,12 +23,6 @@
       "picture": "https://images.pexels.com/photos/1581384/pexels-photo-1581384.jpeg?auto=compress&cs=tinysrgb&w=800",
       "name": "Steakhouse Grill",
       "openedDate": "2016-09-12"
-    },
-    {
-      "id": "8",
-      "picture": "https://images.pexels.com/photos/239975/pexels-photo-239975.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "name": "Vegetarian Delight",
-      "openedDate": "2015-04-03"
     },
     {
       "id": "9",
@@ -113,6 +95,17 @@
       "address": "idjadja",
       "cuisine": [
         "Indian"
+      ],
+      "city": "Skopje",
+      "opened": "2024-02-08"
+    },
+    {
+      "id": "",
+      "name": "Burger",
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Barbieri_-_ViaSophia25668.jpg/1200px-Barbieri_-_ViaSophia25668.jpg",
+      "address": "Ilindenska",
+      "cuisine": [
+        "Macedonian"
       ],
       "city": "Skopje",
       "opened": "2024-02-08"

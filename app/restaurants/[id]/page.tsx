@@ -6,6 +6,7 @@ import { Restaurant } from '@/types'
 import styles from "./RestaurantDetails.module.css"
 import Modal from '@/app/components/Modal/Modal'
 import { useRouter } from 'next/navigation'
+import Link from 'next/link'
 
 // export const dynamicParams = true
 
@@ -70,13 +71,19 @@ const RestaurantDetails: React.FC<RestaurantDetailsProps> = async ({params}) => 
       }
     };
 
+    const handleEdit = () => {
+      router.push(`/restaurants/${restaurant.id}/update`);
+    }
 
   return (
     <div className={styles.details_container}>
       <h2>Restaurant Details</h2>
         <Card key={restaurant.id} restaurant={restaurant} />
+        <div className={styles.buttons_container}>
+
         <button onClick={handleDelete}>Delete Restaurant</button>
-        <button >Edit Restaurant</button>
+        <button onClick={handleEdit}>Edit</button>
+        </div>
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} onConfirm={handleDelete} />
     </div>
   )
